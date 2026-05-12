@@ -1,0 +1,97 @@
+html {
+    font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    background-color: lightyellow;
+    color: #333;
+    border: rebeccapurple 7px solid;
+}
+
+.tit {  
+    color: rebeccapurple; 
+    font-size: 2.5em; 
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    text-indent: 6.7vw;
+    margin-bottom: 30px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 4px rebeccapurple solid;
+    border-radius: 5px;
+}
+
+.imgtxt {
+    width: 5rem;
+    height: 5rem;
+}
+
+.exemplo {
+    width: 67vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+}
+
+nav a {
+    color: rebeccapurple;
+    text-decoration: none;
+    background-color: rgb(209, 209, 209);
+    border: 3px black solid;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+main h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main h2 img {
+    border: 2px black solid;
+    border-radius: 5px;
+}
+hr {
+    border: rebeccapurple 2px solid;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    border: rebeccapurple solid;
+    background-color: gray;
+}
+
+#galeria img {
+    margin: 3px;
+    height: 23vw;
+    width: 25vw;
+    object-fit: cover;
+    border: rebeccapurple solid 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+footer p {
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
