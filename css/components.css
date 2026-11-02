@@ -57,3 +57,178 @@ mas os valores são específicos para este projeto.
     display: block;
     margin: 0 auto;
 }
+
+.painel-fotos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: clamp(6rem, 12vw, 11rem);
+    grid-auto-flow: dense;
+    gap: 12px;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.painel-fotos__imagem {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.painel-fotos__imagem--destaque {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.painel-fotos__imagem--vertical {
+    grid-row: span 2;
+}
+
+.painel-fotos__imagem--horizontal {
+    grid-column: span 2;
+}
+
+.formulario-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    width: min(94%, 75rem);
+    margin: 2rem auto;
+}
+
+.formulario-figura {
+    margin: 0;
+}
+
+.formulario-figura img {
+    display: block;
+    width: 100%;
+    min-height: 24rem;
+    max-height: 40rem;
+    object-fit: contain;
+    background-color: var(--light-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.formulario-figura figcaption {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.formulario {
+    display: grid;
+    gap: 1rem;
+}
+
+.formulario__grupo {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.formulario__grupo legend {
+    padding: 0 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.formulario__campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.formulario__campo {
+    display: grid;
+    align-content: start;
+    gap: 0.4rem;
+}
+
+.formulario__campo--completo {
+    grid-column: 1 / -1;
+}
+
+.formulario__campo input:not([type="radio"]):not([type="checkbox"]),
+.formulario__campo select,
+.formulario__campo textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 0.65rem;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+    font: inherit;
+}
+
+.formulario__campo textarea {
+    resize: vertical;
+}
+
+.formulario__rotulo {
+    font-weight: bold;
+}
+
+.formulario__opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.formulario__opcao,
+.formulario__opcoes label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.formulario__botao {
+    justify-self: start;
+    padding: 0.75rem 1.25rem;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.formulario__botao:hover {
+    color: var(--dark-color);
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 700px) {
+    .painel-fotos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: clamp(6rem, 25vw, 9rem);
+        width: 96%;
+    }
+}
+
+@media (max-width: 800px) {
+    .formulario-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .formulario-figura img {
+        min-height: 16rem;
+        max-height: 28rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario__campos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .formulario__campo--completo {
+        grid-column: auto;
+    }
+}
