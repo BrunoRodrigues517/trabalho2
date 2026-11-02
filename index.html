@@ -3,7 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Funções Afim</title>
+	<meta name="description" content="Conheça as funções afim, quadrática, exponencial e logarítmica, com explicações e gráficos.">
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#fffbe9">
+	<title>Funções Matemáticas: afim, quadrática, exponencial e logarítmica</title>
+
+	<!-- Open Graph: informações usadas na prévia ao compartilhar a página nas redes sociais. -->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:site_name" content="Funções Matemáticas">
+	<meta property="og:title" content="Funções Matemáticas: afim, quadrática, exponencial e logarítmica">
+	<meta property="og:description" content="Conheça diferentes funções matemáticas por meio de explicações e gráficos.">
+	<meta property="og:image" content="img/logo.png">
+	<meta property="og:image:alt" content="Logo de uma lâmpada com uma equação matemática.">
+
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -13,11 +26,13 @@
 	</header>
 
 	<nav>
-		<a class="navs" href="#afim">Função Afim</a>
-		<a class="navs" href="#quad">Função Quadrática</a>
-		<a class="navs" href="#expo">Função Exponencial</a>
-		<a class="navs" href="#log">Função Logarítimica</a>
-		<a class="navs" href="#galeria">Galeria de fotos</a>
+		<a class="navs" href="#afim">Afim</a>
+		<a class="navs" href="#quad">Quadrática</a>
+		<a class="navs" href="#expo">Exponencial</a>
+		<a class="navs" href="#log">Logarítimica</a>
+		<a class="navs" href="#form">Formulário</a>
+		<a class="navs" href="#painel">Painel</a>
+		<a class="navs" href="#galeria">Galeria</a>
 	</nav>
 <br>
 <hr>
@@ -112,6 +127,95 @@
 
 		<br>
 		<hr>
+		<!-- Seção de contato: reúne a ilustração e o formulário em um mesmo layout. -->
+		<section id="form">
+			<h2 class="tit">Entre em contato</h2>
+			<!-- O CSS Grid posiciona a figura e o formulário lado a lado em telas grandes. -->
+			<div class="formulario-layout">
+				<!-- figure agrupa a imagem e sua legenda; o alt descreve o gráfico para leitores de tela. -->
+				<figure class="formulario-figura">
+					<img src="img/afim.png" alt="Gráfico de uma função afim, com uma reta no plano cartesiano.">
+					<figcaption>Explore as funções matemáticas e envie sua dúvida ou sugestão.</figcaption>
+				</figure>
+
+				<!-- O formulário usa GET para demonstrar o envio dos dados pela URL. -->
+				<form class="formulario" action="#" method="get">
+					<!-- fieldset e legend agrupam campos relacionados e identificam cada conjunto. -->
+					<fieldset class="formulario__grupo">
+						<legend>Seus dados</legend>
+						<div class="formulario__campos">
+							<div class="formulario__campo">
+								<!-- O label associado ao id identifica o campo e amplia sua área de clique. -->
+								<label for="nome">Nome</label>
+								<input type="text" id="nome" name="nome" autocomplete="name" required>
+							</div>
+							<div class="formulario__campo">
+								<label for="email">E-mail</label>
+								<!-- O tipo email permite ao navegador validar o formato do endereço. -->
+								<input type="email" id="email" name="email" autocomplete="email" required>
+							</div>
+							<div class="formulario__campo">
+								<!-- O tipo date oferece um seletor de data adequado. -->
+								<label for="data">Data de nascimento</label>
+								<input type="date" id="data" name="data">
+							</div>
+							<div class="formulario__campo">
+								<label for="assunto">Assunto</label>
+								<!-- select limita a escolha às opções disponíveis; required exige uma seleção. -->
+								<select id="assunto" name="assunto" required>
+									<option value="" disabled selected>Selecione um assunto</option>
+									<option value="duvida">Dúvida sobre uma função</option>
+									<option value="sugestao">Sugestão para o site</option>
+									<option value="outro">Outro</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="formulario__grupo">
+						<legend>Mensagem</legend>
+						<div class="formulario__campos">
+							<div class="formulario__campo formulario__campo--completo">
+								<label for="mensagem">Sua mensagem</label>
+								<textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+							</div>
+							<div class="formulario__campo formulario__campo--completo">
+								<!-- Opções de rádio com o mesmo name permitem escolher apenas uma preferência. -->
+								<span class="formulario__rotulo">Como prefere receber uma resposta?</span>
+								<div class="formulario__opcoes">
+									<label><input type="radio" name="contato" value="email" checked> E-mail</label>
+									<label><input type="radio" name="contato" value="telefone"> Telefone</label>
+								</div>
+							</div>
+							<div class="formulario__campo formulario__campo--completo">
+								<!-- Checkbox opcional: marcado, indica consentimento para receber novidades. -->
+								<label class="formulario__opcao">
+									<input type="checkbox" name="novidades" value="sim">
+									Quero receber novidades sobre o conteúdo.
+								</label>
+							</div>
+						</div>
+					</fieldset>
+
+					<!-- O botão envia as informações após a validação dos campos obrigatórios. -->
+					<button class="formulario__botao" type="submit">Enviar formulário</button>
+				</form>
+			</div>
+		</section>
+		<br>
+		<hr>
+		<br>
+		<!-- painel de fotos -->
+		<section class="painel-fotos" id="painel">
+			<img class="painel-fotos__imagem painel-fotos__imagem--destaque" src="img/logo.png" alt="Logo de uma lâmpada com uma equação matemática.">
+			<img class="painel-fotos__imagem painel-fotos__imagem--vertical" src="img/afim.png" alt="Gráfico da função afim.">
+			<img class="painel-fotos__imagem" src="img/quad.png" alt="Gráfico da função quadrática.">
+			<img class="painel-fotos__imagem" src="img/exponencial.png" alt="Gráfico da função exponencial.">
+			<img class="painel-fotos__imagem painel-fotos__imagem--horizontal" src="img/log.png" alt="Gráfico da função logarítmica.">
+			<img class="painel-fotos__imagem" src="img/deflog.png" alt="Definição de logaritmo.">
+		</section>
+		<br>
+		<hr>
 		<h2 class="tit" id="galeria">Galeria de fotos</h2>
 		<div>
 			<img src="img/logo.png" class="imgtxt" alt="Logo de uma Lâmpada com uma equação de 1 + 1 = 2 dentro dela.">
@@ -133,5 +237,27 @@
 		<p><a href="https://www.todamateria.com.br/funcao-logaritmica/" title="Fonte da Função Logarítmica">Função Logarítmica</a></p>
 		<p>Feito por: Bruno da Silva Rodigues</p>
 	</footer>
+	<script>
+		const formulario = document.querySelector(".formulario");
+
+		if (formulario) {
+			const campos = formulario.querySelectorAll("input, select, textarea");
+			const atualizaMensagem = (campo) => {
+				campo.setCustomValidity("");
+
+				if (campo.validity.valueMissing) {
+					campo.setCustomValidity("Por favor, preencha este campo.");
+				} else if (campo.type === "email" && campo.validity.typeMismatch) {
+					campo.setCustomValidity("Por favor, informe um endereço de e-mail válido.");
+				}
+			};
+
+			campos.forEach((campo) => {
+				atualizaMensagem(campo);
+				campo.addEventListener("input", () => atualizaMensagem(campo));
+				campo.addEventListener("change", () => atualizaMensagem(campo));
+			});
+		}
+	</script>
 </body>
 </html>
